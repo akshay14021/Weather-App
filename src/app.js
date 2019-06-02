@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode')
 const weather = require('./utils/weather')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // Defining paths for Express config and setting them for Express
 app.set('view engine', 'hbs')
@@ -90,6 +91,6 @@ app.get('*', (req, res) => {
 
 // Server Setup
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is up. Happy coding!')
 })
